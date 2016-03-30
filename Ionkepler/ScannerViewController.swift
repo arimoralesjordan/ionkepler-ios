@@ -2,7 +2,7 @@
 //  ScannerViewController.swift
 //  Ionkepler
 //
-//  Created by User on 3/30/16.
+//  Created by Ari Morales on 3/30/16.
 //  Copyright © 2016 Coreveillance. All rights reserved.
 //
 

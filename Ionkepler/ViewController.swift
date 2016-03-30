@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Ionkepler
 //
-//  Created by User on 3/30/16.
+//  Created by Ari Morales on 3/30/16.
 //  Copyright © 2016 Coreveillance. All rights reserved.
 //
 
@@ -13,11 +13,12 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
     var webView: WKWebView!
     @IBOutlet var containerView: UIView!
     
-    let url = "http://192.168.1.79/test/scanbarcode/"
+    let url = "http://ionkepler.com/coreveillance/main/mobile.php"
     var barcode = bar_codes()
     let contentController = WKUserContentController();
     let config = WKWebViewConfiguration()
     var sentData: NSDictionary = [:]
+    var input_serial:String = ""
     override func loadView() {
         super.loadView()
         let userScript = WKUserScript(
@@ -46,8 +47,9 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
     }
     func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {
         sentData = message.body as! NSDictionary
-        let function:String = String(sentData["function"] as! NSString)
+        let function:String = String(sentData["fnc"] as! NSString)
         if(function == "activate_scanner") {
+            input_serial = String(sentData["input_serial"] as! NSString)
             self.activate_scanner()
         }
     }
@@ -69,8 +71,8 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
         }
         print("Entro")
         for serial in (self.barcode?.serials)! {
-            print("Enviado "+serial.number)
-            webView!.evaluateJavaScript("load_serial(String( \(serial.number) ))") { (result, error) in
+            print("Sending load_serial({serial:'\(serial.number)',product_number:'\(serial.product)',input_serial:'\(input_serial)'})")
+            webView!.evaluateJavaScript("load_serial({serial:'\(serial.number)',product_number:'\(serial.product)',input_serial:'\(input_serial)'})") { (result, error) in
                 if error != nil {
                     print(result)
                 }
