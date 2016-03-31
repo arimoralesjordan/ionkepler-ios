@@ -77,7 +77,6 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
 		} else {
 			print("Can't use comgooglemaps://");
 		}
-
 	}
     func activate_scanner() {
         print("Activating Scanner")
