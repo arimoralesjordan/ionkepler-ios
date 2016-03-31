@@ -58,11 +58,19 @@
                                     <segue destination="V2V-4c-l0s" kind="unwind" unwindAction="unwindToScanner:" id="yy5-Du-XId"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJY-CS-TN3">
+                                <rect key="frame" x="21" y="87" width="35" height="30"/>
+                                <state key="normal" title="Light"/>
+                                <connections>
+                                    <action selector="LightToggle:" destination="fFK-qX-nWE" eventType="touchUpInside" id="ygO-JF-Uqb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="donebutton" destination="iHi-fK-v6X" id="6A0-8Q-z0Y"/>
+                        <outlet property="lightbutton" destination="aJY-CS-TN3" id="O1K-2H-0Ld"/>
                         <outlet property="scannerlabel" destination="vrY-lQ-kPU" id="7Ur-Ga-doi"/>
                     </connections>
                 </viewController>

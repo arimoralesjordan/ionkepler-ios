@@ -12,8 +12,9 @@ import AVFoundation
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet var donebutton: UIButton!
     @IBOutlet var scannerlabel: UILabel!
-    
-    var captureSession:AVCaptureSession?
+	@IBOutlet var lightbutton: UIButton!
+	
+	var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     var audioPlayer: AVAudioPlayer!
@@ -59,6 +60,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             // Move the message label to the top view
             view.bringSubviewToFront(scannerlabel)
             view.bringSubviewToFront(donebutton)
+			view.bringSubviewToFront(lightbutton)
             
             // Initialize QR Code Frame to highlight the QR code
             qrCodeFrameView = UIView()
@@ -136,4 +138,20 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             barcode_send=barcode
         }
     }
+	@IBAction func LightToggle(sender: AnyObject) {
+		let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+		if (device.hasTorch) {
+			do {
+				try device.lockForConfiguration()
+				if (device.torchMode == AVCaptureTorchMode.On) {
+					device.torchMode = AVCaptureTorchMode.Off
+				} else {
+					try device.setTorchModeOnWithLevel(1.0)
+				}
+				device.unlockForConfiguration()
+			} catch {
+				print(error)
+			}
+		}
+	}
 }
