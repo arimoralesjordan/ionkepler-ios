@@ -404,6 +404,7 @@
 				CE70CB901CAC0B93000C3403 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE70CB911CAC0B93000C3403 /* Build configuration list for PBXNativeTarget "IonkeplerTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +413,7 @@
 				CE70CB931CAC0B93000C3403 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

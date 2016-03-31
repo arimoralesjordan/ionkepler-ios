@@ -13,7 +13,7 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
     var webView: WKWebView!
     @IBOutlet var containerView: UIView!
     
-    let url = "http://ionkepler.com/coreveillance/main/mobile.php"
+    let url = "http://192.168.1.79/coreveillance/main/mobile.php"
     var barcode = bar_codes()
     let contentController = WKUserContentController();
     let config = WKWebViewConfiguration()
@@ -52,7 +52,33 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
             input_serial = String(sentData["input_serial"] as! NSString)
             self.activate_scanner()
         }
+		if(function == "ShowStatusBar") {
+			self.ShowStatusBar()
+		}
+		if(function == "hide_statusbar") {
+			self.HideStatusBar()
+		}
+		if(function == "ShowRouteMap") {
+			let daddress:String = String(sentData["daddress"] as! NSString)
+			self.ShowRouteMap(daddress)
+		}
     }
+	func ShowStatusBar()  {
+		UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
+	}
+	func HideStatusBar()  {
+		UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .Fade)
+	}
+	func ShowRouteMap(daddress:String){
+		print("Opening: comgooglemaps://?saddr=&daddr=\(daddress)&directionsmode=driving")
+		if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
+			UIApplication.sharedApplication().openURL(NSURL(string:
+				"comgooglemaps://?saddr=&daddr=\(daddress)&directionsmode=driving")!)
+		} else {
+			print("Can't use comgooglemaps://");
+		}
+
+	}
     func activate_scanner() {
         print("Activating Scanner")
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ScannerViewController") as UIViewController
