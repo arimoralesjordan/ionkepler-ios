@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE186E901CE28EEA00540493 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE186E8C1CE28EEA00540493 /* EPExtensions.swift */; };
+		CE186E911CE28EEA00540493 /* EPSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE186E8D1CE28EEA00540493 /* EPSignatureView.swift */; };
+		CE186E921CE28EEA00540493 /* EPSignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE186E8E1CE28EEA00540493 /* EPSignatureViewController.swift */; };
+		CE186E931CE28EEA00540493 /* EPSignatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE186E8F1CE28EEA00540493 /* EPSignatureViewController.xib */; };
+		CE186EA01CE3C45C00540493 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE186E9F1CE3C45C00540493 /* CoreLocation.framework */; };
 		CE70CB751CAC0B93000C3403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70CB741CAC0B93000C3403 /* AppDelegate.swift */; };
 		CE70CB771CAC0B93000C3403 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70CB761CAC0B93000C3403 /* ViewController.swift */; };
 		CE70CB7A1CAC0B93000C3403 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE70CB781CAC0B93000C3403 /* Main.storyboard */; };
@@ -30,6 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE186E8C1CE28EEA00540493 /* EPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPExtensions.swift; sourceTree = "<group>"; };
+		CE186E8D1CE28EEA00540493 /* EPSignatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSignatureView.swift; sourceTree = "<group>"; };
+		CE186E8E1CE28EEA00540493 /* EPSignatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSignatureViewController.swift; sourceTree = "<group>"; };
+		CE186E8F1CE28EEA00540493 /* EPSignatureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EPSignatureViewController.xib; sourceTree = "<group>"; };
+		CE186E9F1CE3C45C00540493 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CE70CB711CAC0B93000C3403 /* Ionkepler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ionkepler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE70CB741CAC0B93000C3403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE70CB761CAC0B93000C3403 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE186EA01CE3C45C00540493 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +74,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE186E941CE29D3000540493 /* sig.data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = sig.data;
+			sourceTree = "<group>";
+		};
 		CE70CB681CAC0B93000C3403 = {
 			isa = PBXGroup;
 			children = (
+				CE186E9F1CE3C45C00540493 /* CoreLocation.framework */,
 				CE70CB731CAC0B93000C3403 /* Ionkepler */,
 				CE70CB881CAC0B93000C3403 /* IonkeplerTests */,
 				CE70CB721CAC0B93000C3403 /* Products */,
@@ -85,6 +104,11 @@
 		CE70CB731CAC0B93000C3403 /* Ionkepler */ = {
 			isa = PBXGroup;
 			children = (
+				CE186E941CE29D3000540493 /* sig.data */,
+				CE186E8C1CE28EEA00540493 /* EPExtensions.swift */,
+				CE186E8D1CE28EEA00540493 /* EPSignatureView.swift */,
+				CE186E8E1CE28EEA00540493 /* EPSignatureViewController.swift */,
+				CE186E8F1CE28EEA00540493 /* EPSignatureViewController.xib */,
 				CE70CB741CAC0B93000C3403 /* AppDelegate.swift */,
 				CE70CB761CAC0B93000C3403 /* ViewController.swift */,
 				CE70CB781CAC0B93000C3403 /* Main.storyboard */,
@@ -156,6 +180,7 @@
 				TargetAttributes = {
 					CE70CB701CAC0B93000C3403 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = F3NW7SVQ5P;
 					};
 					CE70CB841CAC0B93000C3403 = {
 						CreatedOnToolsVersion = 7.3;
@@ -188,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE70CB7F1CAC0B93000C3403 /* LaunchScreen.storyboard in Resources */,
+				CE186E931CE28EEA00540493 /* EPSignatureViewController.xib in Resources */,
 				CE70CB991CAC3BEA000C3403 /* Bleep.wav in Resources */,
 				CE70CB7C1CAC0B93000C3403 /* Assets.xcassets in Resources */,
 				CE70CB7A1CAC0B93000C3403 /* Main.storyboard in Resources */,
@@ -209,7 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE186E911CE28EEA00540493 /* EPSignatureView.swift in Sources */,
+				CE186E901CE28EEA00540493 /* EPExtensions.swift in Sources */,
 				CE70CB771CAC0B93000C3403 /* ViewController.swift in Sources */,
+				CE186E921CE28EEA00540493 /* EPSignatureViewController.swift in Sources */,
 				CE70CB951CAC0E4A000C3403 /* bar_code.swift in Sources */,
 				CE70CB751CAC0B93000C3403 /* AppDelegate.swift in Sources */,
 				CE70CB971CAC38E0000C3403 /* ScannerViewController.swift in Sources */,
@@ -341,10 +370,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Ionkepler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coreveillance.Ionkepler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -353,10 +386,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Ionkepler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.coreveillance.Ionkepler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
