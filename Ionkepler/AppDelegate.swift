@@ -35,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			print("Going All")
 			return UIInterfaceOrientationMask.All;
 		}
-		
 	}
 	/*func application(application: UIApplication, supportedInterfaceOrientationsForWindow window: UIWindow?) -> UIInterfaceOrientationMask {
 		let secondController = self.window!.rootViewController!.presentedViewController as! EPSignatureViewController
