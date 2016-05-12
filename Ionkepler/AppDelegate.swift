@@ -14,11 +14,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    /*func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true
-    }
-
+    }*/
+	func application(application: UIApplication, supportedInterfaceOrientationsForWindow window: UIWindow?) -> UIInterfaceOrientationMask {
+		
+		if self.window?.rootViewController?.presentedViewController is EPSignatureViewController {
+			
+			let secondController = self.window!.rootViewController!.presentedViewController as! EPSignatureViewController
+			
+			if secondController.isPresented {
+				print("Going Landscape")
+				return UIInterfaceOrientationMask.LandscapeRight;
+			} else {
+				print("Going Portrait")
+				return UIInterfaceOrientationMask.Portrait;
+			}
+		} else {
+			print("Going All")
+			return UIInterfaceOrientationMask.All;
+		}
+		
+	}
+	/*func application(application: UIApplication, supportedInterfaceOrientationsForWindow window: UIWindow?) -> UIInterfaceOrientationMask {
+		let secondController = self.window!.rootViewController!.presentedViewController as! EPSignatureViewController
+		if secondController.isPresented {
+			print("Going Landscape")
+			return UIInterfaceOrientationMask.LandscapeLeft;
+		} else {
+			print("Going Portrait")
+			return UIInterfaceOrientationMask.All;
+		}
+	}*/
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

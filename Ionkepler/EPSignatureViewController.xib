@@ -98,6 +98,7 @@
                 <constraint firstItem="J7f-zy-tMu" firstAttribute="centerY" secondItem="aik-5V-tSc" secondAttribute="centerY" constant="-1" id="xje-Yv-Jiz"/>
                 <constraint firstAttribute="bottom" secondItem="Yrj-8B-7oQ" secondAttribute="bottom" constant="100" id="zIP-nq-YWP"/>
             </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
     </objects>
 </document>

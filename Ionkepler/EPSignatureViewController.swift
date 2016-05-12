@@ -29,6 +29,7 @@ public class EPSignatureViewController: UIViewController {
     // MARK: - Public Vars
     
     public var showsDate: Bool = true
+	public var isPresented: Bool = true
     public var showsSaveSignatureOption: Bool = true
     public var signatureDelegate: EPSignatureDelegate
     public var subtitleText = "Sign Here"
@@ -38,7 +39,9 @@ public class EPSignatureViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-
+		let value = UIInterfaceOrientation.LandscapeLeft.rawValue
+		UIDevice.currentDevice().setValue(value, forKey: "orientation")
+		
         let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "onTouchCancelButton")
         cancelButton.tintColor = tintColor
         self.navigationItem.leftBarButtonItem = cancelButton
@@ -152,5 +155,11 @@ public class EPSignatureViewController: UIViewController {
     func onTouchClearButton() {
         signatureView.clear()
     }
+	
+	// Only Landscape Orientation
+	
+	override public func shouldAutorotate() -> Bool {
+		return true
+	}
     
 }

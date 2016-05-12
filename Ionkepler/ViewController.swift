@@ -19,6 +19,7 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
 	var latitud: Double = 0.0
 	var longitud: Double = 0.0
 	var altitude: Double = 0.0
+	public var isPresented: Bool = false
 	var speed: Double = 0.0
     let url = "http://192.168.1.79/coreveillance/main/mobile.php"
     var barcode = bar_codes()
@@ -105,6 +106,8 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
 		speed=userLocation.speed
 	}
 	func ESignature(customer_name: String) {
+		let value = UIInterfaceOrientation.Portrait.rawValue
+		UIDevice.currentDevice().setValue(value, forKey: "orientation")
 		let signatureVC = EPSignatureViewController(signatureDelegate: self, showsDate: true, showsSaveSignatureOption: true)
 		signatureVC.subtitleText = "I'm pleased with the service"
 		signatureVC.title = customer_name
@@ -114,6 +117,8 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
 		presentViewController(nav, animated: true, completion: nil)
 	}
 	func epSignature(_: EPSignatureViewController, didCancel error : NSError) {
+		let value = UIInterfaceOrientation.Portrait.rawValue
+		UIDevice.currentDevice().setValue(value, forKey: "orientation")
 		print("User canceled")
 	}
 	func epSignature(_: EPSignatureViewController, didSigned signatureImage : UIImage, boundingRect: CGRect) {
