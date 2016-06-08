@@ -16,19 +16,21 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
     @IBOutlet var containerView: UIView!
 	
 	let locationManager = CLLocationManager()
+
+	var session = iksession(us:"", psw:"")
 	var latitud: Double = 0.0
 	var longitud: Double = 0.0
 	var altitude: Double = 0.0
-	public var isPresented: Bool = false
+	var isPresented: Bool = false
 	var speed: Double = 0.0
-    let url = "http://192.168.1.79/coreveillance/main/mobile.php"
+	var accuracy: Double = 0.0
+    let url = "http://ionkepler.com/coreveillance/main/mobile.php"
     var barcode = bar_codes()
     let contentController = WKUserContentController();
     let config = WKWebViewConfiguration()
     var sentData: NSDictionary = [:]
     var input_serial:String = ""
 	var SignatureResponde=""
-	
 	override func loadView() {
         super.loadView()
         let userScript = WKUserScript(
@@ -60,6 +62,7 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
         let requestURL = NSURL(string:url)
         let request = NSURLRequest(URL: requestURL!)
         self.webView!.loadRequest(request)
+		self.GetSession()
 		self.init_Location()
     }
     func userContentController(userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {
@@ -88,11 +91,23 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
 			let input = String(sentData["input"] as! NSString)
 			self.GetGPSLocation(input)
 		}
+		if(function == "SaveSession") {
+			let user = String(sentData["user"] as! NSString)
+			let password = String(sentData["password"] as! NSString)
+			self.SaveSession(user,password: password)
+		}
+		if(function == "GetSession") {
+			self.GetSession()
+		}
+		if(function == "DeleteSession") {
+			self.DeleteSession()
+		}
     }
 	func GetGPSLocation(input : String) {
-		let location = "{lat: '\(latitud)',long: '\(longitud)',altitude: '\(altitude)',speed: '\(speed)'}"
-		print("Sending $('#\(input)').val('\(location)')")
-		webView!.evaluateJavaScript("$('#\(input)').val('\(location)')") { (result, error) in
+		let location = "{lat:'\(latitud)',long: '\(longitud)',altitude: '\(altitude)',speed: '\(speed)',accuracy: '\(accuracy)'}"
+		let send="$('#\(input)').val(\"\(location)\");CallbackNativeApp();"
+		print("Sending \(send)")
+		webView!.evaluateJavaScript(send) { (result, error) in
 			if error != nil {
 				print(result)
 			}
@@ -104,6 +119,7 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
 		longitud=userLocation.coordinate.longitude
 		altitude=userLocation.altitude
 		speed=userLocation.speed
+		accuracy=userLocation.horizontalAccuracy
 	}
 	func ESignature(customer_name: String) {
 		let value = UIInterfaceOrientation.Portrait.rawValue
@@ -174,5 +190,25 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
             }
         }
     }
+	func SaveSession(user: String, password: String) {
+		session.user=user
+		session.password=password
+		session.SaveSession()
+	}
+	func DeleteSession() {
+		session.user=""
+		session.password=""
+		session.SaveSession()
+	}
+	func GetSession() {
+		session.GetSession()
+		print("Sending xajax_controlador('iniciar_sesion',{user:'\(session.user)',password:'\(session.password)'});")
+		webView!.evaluateJavaScript("xajax_controlador('iniciar_sesion',{user:'\(session.user)',password:'\(session.password)'});") { (result, error) in
+			if error != nil {
+				print(result)
+			}
+		}
+	}
+
 }
 

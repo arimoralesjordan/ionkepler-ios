@@ -159,7 +159,7 @@ public class EPSignatureViewController: UIViewController {
 	// Only Landscape Orientation
 	
 	override public func shouldAutorotate() -> Bool {
-		return true
+		return false
 	}
     
 }

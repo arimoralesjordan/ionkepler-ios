@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 				return UIInterfaceOrientationMask.Portrait;
 			}
 		} else {
-			print("Going All")
+			print("Going Portrait or Landscape")
 			return UIInterfaceOrientationMask.All;
 		}
 	}
