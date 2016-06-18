@@ -184,7 +184,7 @@
 				TargetAttributes = {
 					CE70CB701CAC0B93000C3403 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = F3NW7SVQ5P;
+						DevelopmentTeam = VXB75HU474;
 					};
 					CE70CB841CAC0B93000C3403 = {
 						CreatedOnToolsVersion = 7.3;
@@ -381,7 +381,7 @@
 				INFOPLIST_FILE = Ionkepler/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.coreveillance.Ionkepler;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreveillance.ionkepler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -397,7 +397,7 @@
 				INFOPLIST_FILE = Ionkepler/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.coreveillance.Ionkepler;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coreveillance.ionkepler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
