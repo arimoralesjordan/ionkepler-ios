@@ -137,6 +137,12 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
 		UIDevice.currentDevice().setValue(value, forKey: "orientation")
 		print("User canceled")
 	}
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
 	func epSignature(_: EPSignatureViewController, didSigned signatureImage : UIImage, boundingRect: CGRect) {
 		let signaturepng = UIImagePNGRepresentation(signatureImage)
 		var signaturepngBase64:NSString = signaturepng!.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
@@ -150,10 +156,12 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
 		}
 	}
 	func ShowStatusBar()  {
-		UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
+        prefersStatusBarHidden()
+		//UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
 	}
 	func HideStatusBar()  {
-		UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .Fade)
+        prefersStatusBarHidden()
+		//UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .Fade)
 	}
 	func ShowRouteMap(daddress:String){
 		print("Opening: comgooglemaps://?saddr=&daddr=\(daddress)&directionsmode=driving")
