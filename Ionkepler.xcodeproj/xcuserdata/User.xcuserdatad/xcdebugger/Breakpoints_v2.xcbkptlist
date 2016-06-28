@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ionkepler/EPSignatureViewController.swift"
+            timestampString = "484757796.383449"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "onTouchDoneButton()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ionkepler/Location.swift"
+            timestampString = "484688400.878765"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ionkepler/EPSignatureViewController.swift"
+            timestampString = "484757796.383449"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "EPSignatureViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ionkepler.EPSignatureViewController.showsDate.getter : Swift.Bool"
+                  moduleName = "Ionkepler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/User/Documents/workspace/ios/IonkeplerBeta2/Ionkepler/EPSignatureViewController.swift"
+                  timestampString = "484756006.293749"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ionkepler.EPSignatureViewController.showsDate.setter : Swift.Bool"
+                  moduleName = "Ionkepler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/User/Documents/workspace/ios/IonkeplerBeta2/Ionkepler/EPSignatureViewController.swift"
+                  timestampString = "484756006.295081"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ionkepler.EPSignatureViewController.init (signatureDelegate : Ionkepler.EPSignatureDelegate, showsDate : Swift.Bool, showsSaveSignatureOption : Swift.Bool) -&gt; Ionkepler.EPSignatureViewController"
+                  moduleName = "Ionkepler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/User/Documents/workspace/ios/IonkeplerBeta2/Ionkepler/EPSignatureViewController.swift"
+                  timestampString = "484756006.295199"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ionkepler.EPSignatureViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Ionkepler.EPSignatureViewController&gt;"
+                  moduleName = "Ionkepler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/User/Documents/workspace/ios/IonkeplerBeta2/Ionkepler/EPSignatureViewController.swift"
+                  timestampString = "484756006.295289"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "412">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ionkepler/EPSignatureViewController.swift"
+            timestampString = "484756096.50224"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "EPSignatureViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ionkepler.EPSignatureViewController.showsDate.getter : Swift.Bool"
+                  moduleName = "Ionkepler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/User/Documents/workspace/ios/IonkeplerBeta2/Ionkepler/EPSignatureViewController.swift"
+                  timestampString = "484756096.503444"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ionkepler.EPSignatureViewController.showsDate.setter : Swift.Bool"
+                  moduleName = "Ionkepler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/User/Documents/workspace/ios/IonkeplerBeta2/Ionkepler/EPSignatureViewController.swift"
+                  timestampString = "484756096.503584"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ionkepler.EPSignatureViewController.init (signatureDelegate : Ionkepler.EPSignatureDelegate, showsDate : Swift.Bool, showsSaveSignatureOption : Swift.Bool) -&gt; Ionkepler.EPSignatureViewController"
+                  moduleName = "Ionkepler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/User/Documents/workspace/ios/IonkeplerBeta2/Ionkepler/EPSignatureViewController.swift"
+                  timestampString = "484756096.503671"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ionkepler.EPSignatureViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Ionkepler.EPSignatureViewController&gt;"
+                  moduleName = "Ionkepler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/User/Documents/workspace/ios/IonkeplerBeta2/Ionkepler/EPSignatureViewController.swift"
+                  timestampString = "484756096.503753"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "412">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ionkepler/EPSignatureViewController.swift"
+            timestampString = "484757796.383449"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "shouldAutorotate()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ionkepler/ViewController.swift"
+            timestampString = "487519570.237486"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "unwindToScanner(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ionkepler/ViewController.swift"
+            timestampString = "487519570.237486"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "SaveSession(_:password:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

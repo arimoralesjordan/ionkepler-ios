@@ -104,8 +104,8 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
 		}
     }
 	func GetGPSLocation(input : String) {
-		let location = "{lat:'\(latitud)',long: '\(longitud)',altitude: '\(altitude)',speed: '\(speed)',accuracy: '\(accuracy)'}"
-		let send="$('#\(input)').val(\"\(location)\");CallbackNativeApp();"
+		let location = "{\"lat\":\"\(latitud)\",\"long\": \"\(longitud)\",\"altitude\": \"\(altitude)\",\"speed\": \"\(speed)\",\"accuracy\": \"\(accuracy)\"}"
+		let send="$('#\(input)').val('\(location)');CallbackNativeApp();"
 		print("Sending \(send)")
 		webView!.evaluateJavaScript(send) { (result, error) in
 			if error != nil {
