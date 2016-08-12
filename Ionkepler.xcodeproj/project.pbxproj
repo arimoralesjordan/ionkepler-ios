@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE04ACB71D5CEA1700D9E323 /* DrawPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04ACB61D5CEA1700D9E323 /* DrawPadViewController.swift */; };
+		CE04ACB91D5CEA4400D9E323 /* SettingsDrawPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04ACB81D5CEA4400D9E323 /* SettingsDrawPadViewController.swift */; };
 		CE186E901CE28EEA00540493 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE186E8C1CE28EEA00540493 /* EPExtensions.swift */; };
 		CE186E911CE28EEA00540493 /* EPSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE186E8D1CE28EEA00540493 /* EPSignatureView.swift */; };
 		CE186E921CE28EEA00540493 /* EPSignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE186E8E1CE28EEA00540493 /* EPSignatureViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE04ACB61D5CEA1700D9E323 /* DrawPadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawPadViewController.swift; sourceTree = "<group>"; };
+		CE04ACB81D5CEA4400D9E323 /* SettingsDrawPadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDrawPadViewController.swift; sourceTree = "<group>"; };
 		CE186E8C1CE28EEA00540493 /* EPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPExtensions.swift; sourceTree = "<group>"; };
 		CE186E8D1CE28EEA00540493 /* EPSignatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSignatureView.swift; sourceTree = "<group>"; };
 		CE186E8E1CE28EEA00540493 /* EPSignatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSignatureViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				CE186E941CE29D3000540493 /* sig.data */,
 				CE186E8C1CE28EEA00540493 /* EPExtensions.swift */,
 				CE186E8D1CE28EEA00540493 /* EPSignatureView.swift */,
+				CE04ACB81D5CEA4400D9E323 /* SettingsDrawPadViewController.swift */,
+				CE04ACB61D5CEA1700D9E323 /* DrawPadViewController.swift */,
 				CE186E8E1CE28EEA00540493 /* EPSignatureViewController.swift */,
 				CE186E8F1CE28EEA00540493 /* EPSignatureViewController.xib */,
 				CE70CB741CAC0B93000C3403 /* AppDelegate.swift */,
@@ -239,10 +245,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE04ACB71D5CEA1700D9E323 /* DrawPadViewController.swift in Sources */,
 				CE186E911CE28EEA00540493 /* EPSignatureView.swift in Sources */,
 				CE186E901CE28EEA00540493 /* EPExtensions.swift in Sources */,
 				CE70CB771CAC0B93000C3403 /* ViewController.swift in Sources */,
 				CE186E921CE28EEA00540493 /* EPSignatureViewController.swift in Sources */,
+				CE04ACB91D5CEA4400D9E323 /* SettingsDrawPadViewController.swift in Sources */,
 				CEEA83851CEA3F880094D179 /* session.swift in Sources */,
 				CE70CB951CAC0E4A000C3403 /* bar_code.swift in Sources */,
 				CE70CB751CAC0B93000C3403 /* AppDelegate.swift in Sources */,

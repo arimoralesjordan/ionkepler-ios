@@ -24,7 +24,9 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
 	var isPresented: Bool = false
 	var speed: Double = 0.0
 	var accuracy: Double = 0.0
-    let url = "http://ionkepler.com/coreveillance/main/mobile.php"
+    //let url = "http://ionkepler.com/coreveillance/main/mobile.php"
+	let url = "http://192.168.1.233/coreveillance/main/mobile.php"
+	var imageurl=""
     var barcode = bar_codes()
     let contentController = WKUserContentController();
     let config = WKWebViewConfiguration()
@@ -102,6 +104,10 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
 		if(function == "DeleteSession") {
 			self.DeleteSession()
 		}
+		if(function == "EditImage") {
+			let url = String(sentData["url"] as! NSString)
+			self.EditImage(url)
+		}
     }
 	func GetGPSLocation(input : String) {
 		let location = "{\"lat\":\"\(latitud)\",\"long\": \"\(longitud)\",\"altitude\": \"\(altitude)\",\"speed\": \"\(speed)\",\"accuracy\": \"\(accuracy)\"}"
@@ -166,10 +172,27 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
 	func ShowRouteMap(daddress:String){
 		print("Opening: comgooglemaps://?saddr=&daddr=\(daddress)&directionsmode=driving")
 		if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
-			UIApplication.sharedApplication().openURL(NSURL(string:
-				"comgooglemaps://?saddr=&daddr=\(daddress)&directionsmode=driving")!)
+			UIApplication.sharedApplication().openURL(NSURL(string: "comgooglemaps://?saddr=&daddr=\(daddress)&directionsmode=driving")!)
 		} else {
 			print("Can't use comgooglemaps://");
+		}
+	}
+	func EditImage(url : String) {
+		print("Editing Image \(url)")
+		let drawpad = self.storyboard?.instantiateViewControllerWithIdentifier("DrawPadViewController") as! DrawPadViewController
+		drawpad.imageurl = url
+		self.presentViewController(drawpad, animated: false, completion: nil)
+	}
+	func DidDrawImage(_: DrawPad, didDraw Image : UIImage, boundingRect: CGRect) {
+		let signaturepng = UIImagePNGRepresentation(Image)
+		var signaturepngBase64:NSString = signaturepng!.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
+		signaturepngBase64 = signaturepngBase64.stringByReplacingOccurrencesOfString("\n", withString: "")
+		signaturepngBase64 = signaturepngBase64.stringByReplacingOccurrencesOfString("\r", withString: "")
+		print("Sending put_src_img('\(SignatureResponde)_image','data:image/png;base64,\(signaturepngBase64)')")
+		webView!.evaluateJavaScript("put_src_img('\(SignatureResponde)_image','data:image/png;base64,\(signaturepngBase64)')") { (result, error) in
+			if error != nil {
+				print(result)
+			}
 		}
 	}
     func activate_scanner() {
@@ -217,6 +240,5 @@ class ViewController: UIViewController, UIWebViewDelegate, WKScriptMessageHandle
 			}
 		}
 	}
-
 }
 
